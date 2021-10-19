@@ -1,0 +1,294 @@
+// home
+@media only screen and (max-width: 768px) {
+
+    // Start Header
+    .vmc-header {
+        &__bannertop {
+            display: none;
+        }
+
+        &__navbar {
+            display: none !important;
+        }
+    }
+
+    .row.vmc-header__content {
+        display: none;
+    }
+
+    // banner
+    .vmc-banner {
+        &__category {
+            display: none;
+        }
+
+        &__eventtop {
+            margin: 0;
+
+            .even-img img {
+                border-radius: 6px;
+            }
+        }
+    }
+
+    // main
+    .vmc-main {
+        .health-course {
+            &__list {
+                grid-template-columns: unset;
+                grid-auto-flow: column;
+                scroll-snap-type: x mandatory;
+                overflow-x: auto;
+                grid-auto-columns: 80%;
+            }
+
+            &__item:first-child {
+                grid-column: 1;
+            }
+        }
+
+        .you-like {
+            &__course {
+                grid-template-columns: unset;
+                grid-auto-flow: column;
+                scroll-snap-type: x mandatory;
+                overflow-x: auto;
+                grid-auto-columns: 80%;
+            }
+        }
+
+        &__keywords--content ul {
+            grid-template-columns: unset;
+            grid-auto-flow: column;
+            scroll-snap-type: x mandatory;
+            overflow-x: auto;
+            grid-auto-columns: 45%;
+        }
+
+        &__lecturers--content ul {
+            grid-template-columns: unset;
+            grid-auto-flow: column;
+            scroll-snap-type: x mandatory;
+            overflow-x: auto;
+            grid-auto-columns: 80%;
+        }
+
+        &__partner--content ul li img {
+            width: 95%;
+        }
+    }
+
+    .vmc-footer {
+        &__first-search {
+            text-align: center;
+
+            div ul {
+                justify-content: center;
+            }
+        }
+
+        &__first-combine,
+        &__learn-practice {
+            justify-content: center;
+            margin: 0.5em 0;
+
+            img {
+                width: 81px;
+            }
+        }
+
+        &__learn-practice {
+            span h3 {
+                font-size: 1.2em;
+            }
+        }
+
+        &__before-navbar {
+            flex-direction: column;
+            display: none;
+
+            // ul {
+            //     flex-direction: column;
+            // }
+
+            // ul li {
+            //     border: none;
+            //     line-height: 2.2em;
+            // }
+        }
+
+        &__menus {
+            text-align: center;
+        }
+
+        &__menus--paycard ul {
+            justify-content: space-around;
+        }
+    }
+
+    .vmc-header-mb {
+        display: block;
+    }
+
+    .vmc-header-mb {
+        &__category {
+            ul p {
+                position: absolute;
+                right: -33px;
+                background-color: white;
+                padding: 0.3em 0.7em;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+    }
+
+    body.afters {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 999;
+        transition: all 0.4s;
+    }
+
+    // Blog
+    .vmc-blog-header {
+        &__line {
+            display: none;
+        }
+    }
+
+    .vmc-blog-main {
+        .news-top {
+            &__list {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            &__item {
+                &:first-child {
+                    grid-row: auto;
+                    grid-column: inherit;
+                    margin: 0;
+                }
+
+                &:nth-child(2),
+                &:nth-child(3) {
+                    margin: 0;
+                    grid-row: auto;
+                    grid-column: inherit;
+                }
+
+                &:nth-child(2) {
+                    grid-row: auto;
+                    grid-column: inherit;
+                }
+
+                &:last-child {
+                    grid-row: auto;
+                    grid-column: inherit;
+                    margin: 0;
+                }
+            }
+        }
+
+        .blog-news-categorys {
+            &__listnews.active {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        .blog-news-disease {
+            &__lists {
+                grid-template-columns: repeat(1, 1fr);
+                margin-left: -2em;
+            }
+
+            &__items {
+                grid-row: auto;
+                grid-column: inherit;
+
+                &:first-child,
+                &:nth-child(2n+1),
+                &:nth-child(2n+2) {
+                    grid-row: auto !important;
+                    grid-column: none !important;
+                }
+            }
+        }
+
+        .blog-news-beautify {
+            &__lists {
+                grid-template-columns: repeat(1, 1fr);
+                margin-left: -2em;
+            }
+
+            &__items {
+
+                &:first-child,
+                &:nth-child(2n+1),
+                &:nth-child(2n+2) {
+                    grid-row: auto !important;
+                    grid-column: none !important;
+                }
+            }
+        }
+    }
+
+    // 
+    .blog-nvbar {
+        display: none;
+    }
+
+    .vmc-blog-header-mb {
+        display: block;
+    }
+
+    .vmc-blog-main {
+        margin-top: 8em;
+    }
+
+    .blog-nvbar-mb__content.active {
+        left: 0;
+        animation-name: menumbopen;
+        animation-duration: 0.6s;
+    }
+
+    @keyframes menumbopen {
+        0% {
+            left: -100%;
+        }
+
+        100% {
+            left: 0;
+        }
+    }
+
+    // page
+    .vmc-blog-main-detail__content .post-detail__shares {
+        position: inherit;
+        margin-bottom: 1em;
+    }
+
+    .vmc-blog-main-detail__content .post-detail__shares .share-icon {
+        writing-mode: horizontal-tb;
+    }
+
+    .vmc-blog-main-detail__prev-post.strick,
+    .vmc-blog-main-detail__next-post.strick {
+        display: none;
+    }
+
+    // blog
+    .vmc-blog-main-detail {
+        padding: 10em 0 2em 0;
+    }
+
+    .vmc-blog-detail-mb {
+        display: block;
+    }
+}

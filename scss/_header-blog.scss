@@ -1,0 +1,219 @@
+.vmc-blog {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.vmc-blog-header {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    background-color: $color-white;
+    transition: all 0.6s;
+    top: 0;
+    left: 0;
+    display: block;
+
+    &__line {
+        padding-bottom: 1em;
+        transition: all 0.6s;
+        animation-duration: 0.6s;
+    }
+
+    &__logos {
+        padding-top: 1em;
+        position: relative;
+        transition: all 0.6s;
+
+        img {
+            max-width: 100%;
+            width: 100px;
+            height: auto;
+
+        }
+    }
+
+    &__banner {
+        position: relative;
+        margin-top: 1em;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 6px solid pink;
+        border-image: repeating-linear-gradient(45deg, pink, pink 1%, purple 1%, purple 8%) 10;
+        animation-name: boderbanner;
+        animation-duration: 0.50s;
+        animation-iteration-count: infinite;
+        transition: all 0.6s;
+
+        a {
+            height: 100%;
+        }
+
+        img.banner-blogs {
+            width: 100%;
+            border-radius: 10px;
+
+        }
+
+        @keyframes boderbanner {
+            0% {
+                border-image: repeating-linear-gradient(45deg, purple, purple 1%, pink 1%, pink 8%) 10;
+                color: purple;
+            }
+
+            100% {
+                border-image: repeating-linear-gradient(45deg, pink, pink 1%, purple 1%, purple 8%) 10;
+            }
+        }
+    }
+
+    // Navbar
+    .blog-nvbar {
+        // display: none;
+        border-top: 1px solid #eee;
+        position: relative;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06),
+            0 6px 6px rgba(0, 0, 0, 0.04);
+
+        &__content {
+            position: relative;
+        }
+
+        &__list {
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 1em 0;
+            margin: 0;
+
+            li {
+                margin-right: 2em;
+            }
+
+            li a {
+                color: $color-main;
+                font-weight: 600;
+                transition: all 0.4s;
+                text-transform: uppercase;
+                font-size: 0.9em;
+
+                &:hover {
+                    color: $color-hover;
+                    text-decoration: none;
+                    transition: all 0.4s;
+                }
+            }
+        }
+
+        &__items.active a {
+            color: $color-hover;
+        }
+    }
+
+
+
+    .sticky &__logos {
+        padding-top: 0.5em;
+        transition: all 0.6s;
+    }
+
+    .sticky &__banner {
+        transition: all 0.6s;
+        margin-top: 0.5em;
+    }
+
+    .sticky &__line {
+        height: 0;
+        animation-duration: 0.6s;
+        animation-name: stickys;
+        transition: all 0.6s;
+        padding-bottom: 0;
+        overflow: hidden;
+        opacity: 0;
+
+    }
+
+    @keyframes stickys {
+        0% {
+            height: 132px;
+        }
+
+        100% {
+            height: 0;
+        }
+    }
+}
+
+// navbar mobile
+.blog-nvbar-mb {
+    // position: relative;
+
+
+    &__content {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 99999;
+        background-color: $color-white;
+        animation-name: menumbclose;
+        animation-duration: 0.6s;
+    }
+
+    @keyframes menumbclose {
+        0% {
+            left: 0;
+        }
+
+        100% {
+            left: -100%;
+        }
+    }
+
+    &__list {
+        padding: 3em 1em;
+        text-align: center;
+    }
+
+    &__items {
+        line-height: 3em;
+
+        a {
+            color: $color-main;
+            text-decoration: none;
+            font-weight: 500;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 1em;
+        right: 2em;
+    }
+}
+
+.vmc-blog-header-mb {
+    display: none;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1em 0;
+    }
+
+    &__menusv {
+        padding-left: 1em;
+        font-size: 1.3em;
+    }
+
+    &__logos {
+        text-align: center;
+
+        img {
+            width: 30%;
+        }
+    }
+}

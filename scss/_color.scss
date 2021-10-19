@@ -1,0 +1,130 @@
+$color-main:#82317f;
+$background-footer:#52246d;
+$bg-footer-before:#be128c;
+$color-white:#FFFFFF;
+$color-black:#000000;
+$color-price:#FF6347;
+$color-after:#9e0078;
+$color-hover:#DCA82F;
+$color-gray:#7C7C7C;
+$color-border:#B2B4B3;
+$font-desc:'Segoe UI',
+Tahoma,
+Geneva,
+Verdana,
+sans-serif;
+
+.vmc-btn-s {
+    padding: 0.5em 0.7em;
+    background-image: linear-gradient($bg-footer-before, $color-main);
+    color: $color-white;
+    border-radius: 6px;
+    display: inline-block;
+
+    &:hover {
+        color: $color-white;
+        text-decoration: none;
+    }
+}
+
+.vmc-btn-ss {
+    padding: 0.5em 0.7em;
+    background-color: $background-footer;
+    color: $color-white;
+    border-radius: 6px;
+    display: inline-block;
+
+    &:hover {
+        color: $color-white;
+        text-decoration: none;
+    }
+}
+
+.hideauthor {
+    overflow: hidden;
+    color: $color-gray;
+    font-family: $font-desc;
+    display: -webkit-box;
+    line-height: 1.8em;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+}
+
+.title-news-blogs {
+    font-size: 1.2em;
+    display: inline-block;
+    background-color: $color-main;
+    padding: 0.3em;
+    color: $color-white;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.title-news-blogs-item {
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 0 0.5em;
+
+    &::after {
+        content: "";
+        height: 25px;
+        width: 3px;
+        background-color: $color-main;
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+    }
+}
+
+.after-title {
+    content: "";
+    height: 25px;
+    width: 4px;
+    background-color: $color-main;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+}
+
+.title-post-blog {
+    color: $color-black;
+    font-size: 1.1em;
+    font-weight: 600;
+    position: relative;
+    padding-left: 0.5em;
+    margin-top: 0.4em;
+    transition: all 0.3s;
+
+    &:hover {
+        color: $color-hover;
+        transition: all 0.3s;
+    }
+
+    &::after {
+        content: "";
+        height: 25px;
+        width: 4px;
+        background-color: $color-main;
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+    }
+}
+
+// blog
+.title-blog-detail {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: $color-main;
+    border-top-left-radius: 0px;
+    display: inline-block;
+    border-top-right-radius: 0px;
+    border-bottom: 5px double $color-main;
+    text-transform: uppercase;
+
+}
